@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { CategoryTag } from "@/components/CategoryTag";
 import { ShareButtons } from "@/components/ShareButtons";
 import { ArticleCard } from "@/components/ArticleCard";
+import { BuyMeCoffeeButton } from "@/components/BuyMeCoffeeButton";
 import { CalendarIcon, ChevronLeft, ChevronDown, ChevronUp } from "lucide-react";
 import { getArticleById, getRelatedArticles } from "@/data/articles";
 
@@ -81,6 +82,7 @@ export default function BlogPost() {
           <article className="prose prose-lg dark:prose-invert max-w-none mb-12">
             <div dangerouslySetInnerHTML={{ __html: article.content }} />
           </article>
+          <BuyMeCoffeeButton articleId={id} />
           
           {/* Share & Tags */}
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-b py-6 mb-12">
